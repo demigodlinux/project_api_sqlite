@@ -1,0 +1,9 @@
+BEGIN TRANSACTION;
+CREATE TABLE IF NOT EXISTS "userData" (
+	"userID"	INTEGER NOT NULL UNIQUE,
+	"UserName"	TEXT NOT NULL UNIQUE,
+	"Password"	TEXT NOT NULL,
+	PRIMARY KEY("userID" AUTOINCREMENT)
+);
+INSERT INTO "userData" ("userID","UserName","Password") VALUES (1,'admin','admin');
+COMMIT;
